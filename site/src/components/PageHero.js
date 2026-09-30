@@ -2,6 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import HeroWords from "@/components/HeroWords";
 import PassCard from "@/components/PassCard";
 import Picture from "@/components/Picture";
+import { dict } from "@/lib/seo";
 
 // Bandeau des pages intérieures, même langage que le hero d'accueil :
 // photo sous voile avec zoom lent, titre en cascade, carte d'embarquement à droite.
@@ -13,7 +14,7 @@ export default function PageHero({ eyebrow, title, sub, crumbs, lang, image, tic
         <div className="page-hero-inner">
           {crumbs && (
             <div className="hero-in" style={{ "--d": "0ms" }}>
-              <Breadcrumbs items={crumbs} label={lang === "en" ? "Breadcrumb" : "Fil d’Ariane"} />
+              <Breadcrumbs items={crumbs} label={dict(lang).ui.breadcrumb} />
             </div>
           )}
           {eyebrow && <p className="eyebrow eyebrow--light hero-in" style={{ "--d": "80ms" }}>{eyebrow}</p>}

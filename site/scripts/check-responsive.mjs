@@ -8,7 +8,7 @@ import path from "node:path";
 
 const BASE = process.env.BASE || "http://localhost:4173";
 const EDGE = process.env.EDGE || "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe";
-const ALL_PAGES = ["/","/services/", "/services/etudiants-internationaux/", "/a-propos/", "/faq/", "/contact/", "/mentions-legales/", "/en/", "/en/services/professionals-investors/", "/en/contact/"];
+const ALL_PAGES = ["/","/services/", "/services/etudiants-internationaux/", "/a-propos/", "/faq/", "/contact/", "/mentions-legales/", "/en/", "/en/services/professionals-investors/", "/en/contact/", "/es/", "/es/servicios/estudiantes-internacionales/", "/es/contacto/"];
 const PAGES = process.env.PAGES ? process.env.PAGES.split(",") : ALL_PAGES;
 const WIDTHS =[320, 360, 390, 430, 600, 768, 820, 900, 1024, 1080, 1180, 1280, 1440, 1920];
 const SHOTS = process.env.SHOTS === "1";

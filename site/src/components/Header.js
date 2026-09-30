@@ -8,13 +8,14 @@ import Icon from "@/components/Icon";
 import { waLink } from "@/content/site";
 
 // nav   : [{ key, label, path }]
-// pairs : { "/chemin/fr/": "/en/path/", … } dans les deux sens, pour le sélecteur de langue.
-export default function Header({ lang, nav, homePath, pairs, ui }) {
+// others : [{ code, name, short, home, pairs }] — les autres langues ; pairs associe
+//          le chemin courant à son équivalent dans cette langue.
+export default function Header({ lang, nav, homePath, others, ui }) {
   const pathname = usePathname() || homePath;
   const [open, setOpen] = useState(false);
 
   const current = pathname.endsWith("/") ? pathname : `${pathname}/`;
-  const otherPath = pairs[current] ?? (lang === "fr" ? "/en/" : "/");
+  const pathIn = (o) => o.pairs[current] ?? o.home;
 
   useEffect(() => setOpen(false), [pathname]);
 
@@ -45,9 +46,13 @@ export default function Header({ lang, nav, homePath, pairs, ui }) {
           </nav>
 
           <div className="header-actions">
-            <LocaleLink href={otherPath} className="lang-switch" hrefLang={lang === "fr" ? "en" : "fr"} lang={lang === "fr" ? "en" : "fr"} aria-label={ui.langLabel}>
-              {ui.langShort}
-            </LocaleLink>
+            <nav className="lang-switches" aria-label={ui.langs}>
+              {others.map((o) => (
+                <LocaleLink key={o.code} href={pathIn(o)} className="lang-switch" hrefLang={o.code} lang={o.code} aria-label={o.name}>
+                  {o.short}
+                </LocaleLink>
+              ))}
+            </nav>
             <a className="btn btn--wa btn--sm header-cta" href={waLink(ui.waDefault)} target="_blank" rel="noopener noreferrer">
               <Icon name="whatsapp" size={18} />
               <span>WhatsApp</span>
@@ -72,9 +77,13 @@ export default function Header({ lang, nav, homePath, pairs, ui }) {
           <Icon name="whatsapp" size={20} />
           <span>{ui.whatsappCta}</span>
         </a>
-        <LocaleLink href={otherPath} className="mobile-lang" hrefLang={lang === "fr" ? "en" : "fr"}>
-          <Icon name="globe" size={18} /> {ui.langLabel}
-        </LocaleLink>
+        <nav className="mobile-langs" aria-label={ui.langs}>
+          {others.map((o) => (
+            <LocaleLink key={o.code} href={pathIn(o)} className="mobile-lang" hrefLang={o.code} lang={o.code}>
+              <Icon name="globe" size={18} /> {o.name}
+            </LocaleLink>
+          ))}
+        </nav>
       </div>
     </>
   );

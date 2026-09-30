@@ -3,13 +3,12 @@ import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
 import RevealObserver from "@/components/RevealObserver";
 import JsonLd from "@/components/JsonLd";
-import { allPageKeys, href } from "@/lib/routes";
+import { allPageKeys, href, LANGS } from "@/lib/routes";
 import { dict, organizationLd } from "@/lib/seo";
 
-// Chrome commun aux deux langues : lien d'évitement, en-tête, pied de page, bouton WhatsApp.
+// Chrome commun à toutes les langues : lien d'évitement, en-tête, pied de page, bouton WhatsApp.
 export default function SiteShell({ lang, children }) {
   const t = dict(lang);
-  const other = lang === "fr" ? "en" : "fr";
 
   const nav = [
     { key: "home", label: t.ui.nav.home, path: href("home", lang) },
@@ -19,13 +18,18 @@ export default function SiteShell({ lang, children }) {
     { key: "contact", label: t.ui.nav.contact, path: href("contact", lang) },
   ];
 
-  // chemin courant → chemin équivalent dans l'autre langue
-  const pairs = Object.fromEntries(allPageKeys().map((k) => [href(k, lang), href(k, other)]));
+  // autres versions : pour chacune, chemin courant → chemin équivalent dans cette langue
+  const others = LANGS.filter((l) => l !== lang).map((l) => ({
+    code: l,
+    name: dict(l).ui.langName,
+    short: dict(l).ui.langShort,
+    home: href("home", l),
+    pairs: Object.fromEntries(allPageKeys().map((k) => [href(k, lang), href(k, l)])),
+  }));
   const ui = {
     menu: t.ui.menu,
     close: t.ui.close,
-    langLabel: t.ui.langLabel,
-    langShort: t.ui.langShort,
+    langs: t.ui.langs,
     whatsappCta: t.ui.whatsappCta,
     waDefault: t.ui.waDefault,
   };
@@ -34,7 +38,7 @@ export default function SiteShell({ lang, children }) {
     <>
       <a className="skip-link" href="#main">{t.ui.skip}</a>
       <JsonLd data={organizationLd(lang)} />
-      <Header lang={lang} nav={nav} homePath={href("home", lang)} pairs={pairs} ui={ui} />
+      <Header lang={lang} nav={nav} homePath={href("home", lang)} others={others} ui={ui} />
       <main id="main">{children}</main>
       <Footer lang={lang} />
       <WhatsAppFab label={t.ui.whatsappFab} message={t.ui.waDefault} />

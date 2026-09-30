@@ -10,7 +10,7 @@ export default function sitemap() {
       lastModified,
       changeFrequency: key === "home" ? "weekly" : "monthly",
       priority: key === "home" ? 1 : key.startsWith("service:") ? 0.9 : key === "legal" ? 0.3 : 0.7,
-      alternates: { languages: { fr: alternates(key, lang).languages.fr, en: alternates(key, lang).languages.en } },
+      alternates: { languages: Object.fromEntries(LANGS.map((l) => [l, alternates(key, lang).languages[l]])) },
     }))
   );
 }

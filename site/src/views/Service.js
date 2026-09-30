@@ -51,7 +51,7 @@ export default function Service({ lang, service }) {
         <div className="container service-hero-grid">
           <div className="service-hero-copy">
             <div className="hero-in" style={{ "--d": "0ms" }}>
-              <Breadcrumbs items={crumbs} label={lang === "en" ? "Breadcrumb" : "Fil d’Ariane"} />
+              <Breadcrumbs items={crumbs} label={t.ui.breadcrumb} />
             </div>
             <h1><HeroWords text={c.title} /></h1>
             <p className="page-hero-sub hero-in" style={{ "--d": "420ms" }}>{c.heroSub}</p>

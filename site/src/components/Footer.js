@@ -71,7 +71,7 @@ export default function Footer({ lang }) {
               </a>
             </li>
             <li className="footer-icon-link">
-              <Icon name="pin" size={18} /> <span>{SITE.city[lang]}, {lang === "fr" ? "Maroc" : "Morocco"}</span>
+              <Icon name="pin" size={18} /> <span>{SITE.city[lang]}, {t.ui.country}</span>
             </li>
           </ul>
         </div>

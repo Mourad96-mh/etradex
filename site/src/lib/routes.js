@@ -1,22 +1,24 @@
 import { SITE } from "@/content/site";
 import { SERVICES } from "@/content/services";
 
-export const LANGS = ["fr", "en"];
+// La première langue est la langue par défaut (racine du site, x-default).
+export const LANGS = ["fr", "en", "es"];
 
 // Clé de page → chemin dans chaque langue (avec slash final, trailingSlash: true).
 const PAGES = {
-  home: { fr: "/", en: "/en/" },
-  about: { fr: "/a-propos/", en: "/en/about/" },
-  services: { fr: "/services/", en: "/en/services/" },
-  faq: { fr: "/faq/", en: "/en/faq/" },
-  contact: { fr: "/contact/", en: "/en/contact/" },
-  legal: { fr: "/mentions-legales/", en: "/en/legal-notice/" },
+  home: { fr: "/", en: "/en/", es: "/es/" },
+  about: { fr: "/a-propos/", en: "/en/about/", es: "/es/sobre-nosotros/" },
+  services: { fr: "/services/", en: "/en/services/", es: "/es/servicios/" },
+  faq: { fr: "/faq/", en: "/en/faq/", es: "/es/preguntas-frecuentes/" },
+  contact: { fr: "/contact/", en: "/en/contact/", es: "/es/contacto/" },
+  legal: { fr: "/mentions-legales/", en: "/en/legal-notice/", es: "/es/aviso-legal/" },
 };
 
 for (const s of SERVICES) {
   PAGES[`service:${s.id}`] = {
     fr: `/services/${s.slug.fr}/`,
     en: `/en/services/${s.slug.en}/`,
+    es: `/es/servicios/${s.slug.es}/`,
   };
 }
 
@@ -28,13 +30,12 @@ export const href = (key, lang) => {
 
 export const absolute = (path) => `${SITE.url}${path}`;
 
-// Pour metadata.alternates : canonical + hreflang fr/en/x-default.
+// Pour metadata.alternates : canonical + hreflang de chaque langue + x-default.
 export const alternates = (key, lang) => ({
   canonical: absolute(href(key, lang)),
   languages: {
-    fr: absolute(href(key, "fr")),
-    en: absolute(href(key, "en")),
-    "x-default": absolute(href(key, "fr")),
+    ...Object.fromEntries(LANGS.map((l) => [l, absolute(href(key, l))])),
+    "x-default": absolute(href(key, LANGS[0])),
   },
 });
 

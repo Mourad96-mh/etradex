@@ -27,3 +27,4 @@
 - [FAQ](https://www.etradex.ma/faq/)
 - [Contact et devis gratuit](https://www.etradex.ma/contact/)
 - [English version](https://www.etradex.ma/en/)
+- [Versión en español](https://www.etradex.ma/es/)

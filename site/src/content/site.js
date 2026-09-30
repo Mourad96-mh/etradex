@@ -19,14 +19,14 @@ export const SITE = {
   phoneDisplay: "",
   email: "eulogesewany09@gmail.com",
 
-  city: { fr: "Rabat – Salé", en: "Rabat – Salé" },
+  city: { fr: "Rabat – Salé", en: "Rabat – Salé", es: "Rabat – Salé" },
   region: "Rabat-Salé-Kénitra",
   country: "MA",
   // Adresse postale : vide = on n'affiche que la ville (et on reste en schema Organization).
   streetAddress: "",
   postalCode: "",
 
-  founder: { name: "Euloges Patrick EWANY", role: { fr: "Fondateur & gérant", en: "Founder & Managing Director" } },
+  founder: { name: "Euloges Patrick EWANY", role: { fr: "Fondateur & gérant", en: "Founder & Managing Director", es: "Fundador y gerente" } },
 
   // Réseaux sociaux : une URL vide = l'icône n'est pas affichée.
   social: {
@@ -41,6 +41,7 @@ export const SITE = {
     form: {
       fr: "SARLAU (société à responsabilité limitée à associé unique)",
       en: "SARLAU (single-member limited liability company)",
+      es: "SARLAU (sociedad de responsabilidad limitada unipersonal)",
     },
     capital: "",
     rc: "",

@@ -10,8 +10,12 @@ const en = {
     menu: "Menu",
     close: "Close",
     nav: { home: "Home", about: "About", services: "Services", faq: "FAQ", contact: "Contact" },
-    langLabel: "Français",
-    langShort: "FR",
+    // name of THIS language, shown in the switcher of the other versions
+    langName: "English",
+    langShort: "EN",
+    langs: "Language",
+    breadcrumb: "Breadcrumb",
+    country: "Morocco",
     whatsappCta: "Message us on WhatsApp",
     whatsappFab: "Message us on WhatsApp",
     contactCta: "Get a quote",
@@ -125,6 +129,7 @@ const en = {
     eyebrow: "About us",
     title: "Your partner on the ground in Morocco",
     sub: "ETRADEX was born from a simple observation: moving to Morocco is a great opportunity, but the first steps can quickly become an obstacle course.",
+    photoAlt: "A street in Rabat, Morocco",
     storyTitle: "Our mission",
     story: [
       "ETRADEX SARLAU is a company based in Rabat–Salé. It supports international students, families, companies and investors who choose Morocco to study, live or grow a business.",

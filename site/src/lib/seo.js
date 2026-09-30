@@ -2,9 +2,11 @@ import { SITE } from "@/content/site";
 import { SERVICES } from "@/content/services";
 import fr from "@/content/fr";
 import en from "@/content/en";
-import { absolute, alternates, href } from "@/lib/routes";
+import es from "@/content/es";
+import { absolute, alternates, href, LANGS } from "@/lib/routes";
 
-export const dict = (lang) => (lang === "en" ? en : fr);
+const DICTS = { fr, en, es };
+export const dict = (lang) => DICTS[lang] ?? fr;
 
 const OG_IMAGE = { url: "/og.jpg", width: 1200, height: 630, alt: "ETRADEX" };
 
@@ -20,7 +22,7 @@ export function pageMetadata({ lang, key, title, description }) {
       type: "website",
       siteName: SITE.name,
       locale: dict(lang).locale,
-      alternateLocale: lang === "fr" ? "en_US" : "fr_MA",
+      alternateLocale: LANGS.filter((l) => l !== lang).map((l) => dict(l).locale),
       url: alt.canonical,
       title,
       description,

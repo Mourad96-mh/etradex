@@ -50,8 +50,8 @@ for (const f of files.sort()) {
   if (h1 !== 1) flag(rel, `${h1} <h1>`);
   if (!canonical) flag(rel, "pas de canonical");
   else if (!canonical.endsWith(rel)) flag(rel, `canonical ≠ URL (${canonical})`);
-  if (hreflangs.sort().join() !== "en,fr,x-default") flag(rel, `hreflang: ${hreflangs.join(",")}`);
-  const expectLang = rel.startsWith("/en/") ? "en" : "fr";
+  if (hreflangs.sort().join() !== "en,es,fr,x-default") flag(rel, `hreflang: ${hreflangs.join(",")}`);
+  const expectLang = rel.match(/^\/(en|es)\//)?.[1] ?? "fr";
   if (lang !== expectLang) flag(rel, `<html lang="${lang}">`);
   if (!og) flag(rel, "pas d'og:image");
 
@@ -66,10 +66,9 @@ for (const f of files.sort()) {
       const nodes = j["@graph"] ?? [j];
       nodes.forEach((n) => types.push(n["@type"]));
       const txt = JSON.stringify(j);
-      if (rel.startsWith("/en/") && /etradex\.ma\/(services|a-propos|faq|contact)\//.test(txt) && !/ItemList|Organization/.test(txt)) {
-        // une URL FR dans un schéma EN
-        if (/"item":"https:\/\/www\.etradex\.ma\/(?!en\/)/.test(txt)) flag(rel, "URL FR dans un JSON-LD EN");
-      }
+      // fil d'Ariane d'une version traduite : chaque URL doit rester dans la même langue
+      const sub = rel.match(/^\/(en|es)\//)?.[1];
+      if (sub && new RegExp(`"item":"https://www\\.etradex\\.ma/(?!${sub}/)`).test(txt)) flag(rel, `URL d'une autre langue dans un JSON-LD ${sub.toUpperCase()}`);
     } catch (e) {
       flag(rel, `JSON-LD invalide : ${e.message}`);
     }

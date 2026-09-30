@@ -18,7 +18,7 @@ export default function Legal({ lang }) {
     [l.labels.capital, orPending(SITE.legal.capital)],
     [l.labels.rc, orPending(SITE.legal.rc)],
     [l.labels.ice, orPending(SITE.legal.ice)],
-    [l.labels.seat, SITE.streetAddress ? `${SITE.streetAddress}, ${SITE.postalCode} Rabat` : `${SITE.city[lang]}, ${lang === "fr" ? "Maroc" : "Morocco"}`],
+    [l.labels.seat, SITE.streetAddress ? `${SITE.streetAddress}, ${SITE.postalCode} Rabat` : `${SITE.city[lang]}, ${t.ui.country}`],
     [l.labels.director, SITE.founder.name],
     [l.labels.email, SITE.email],
   ];

@@ -1,0 +1,285 @@
+// Textos del sitio en español (interfaz + páginas). Los 6 servicios están en services.js.
+
+const es = {
+  lang: "es",
+  locale: "es_ES",
+  slogan: "Tu socio para la movilidad, los estudios y el desarrollo del talento joven en Marruecos",
+
+  ui: {
+    skip: "Ir al contenido",
+    menu: "Menú",
+    close: "Cerrar",
+    nav: { home: "Inicio", about: "Quiénes somos", services: "Servicios", faq: "Preguntas", contact: "Contacto" },
+    // nombre de ESTE idioma, mostrado en el selector de las otras versiones
+    langName: "Español",
+    langShort: "ES",
+    langs: "Idioma",
+    breadcrumb: "Ruta de navegación",
+    country: "Marruecos",
+    whatsappCta: "Escríbenos por WhatsApp",
+    whatsappFab: "Escríbenos por WhatsApp",
+    contactCta: "Pedir presupuesto",
+    learnMore: "Más información",
+    allServices: "Todos nuestros servicios",
+    home: "Inicio",
+    waDefault: "Hola ETRADEX, me gustaría recibir información sobre sus servicios.",
+    waService: (title) => `Hola ETRADEX, me interesa su servicio «${title}».`,
+  },
+
+  footer: {
+    about: "ETRADEX acompaña a estudiantes internacionales, familias, empresas e inversores en su instalación en Marruecos, desde Rabat–Salé.",
+    services: "Servicios",
+    company: "ETRADEX",
+    contact: "Contacto",
+    legal: "Aviso legal",
+    rights: "Todos los derechos reservados.",
+    follow: "Síguenos",
+  },
+
+  home: {
+    metaTitle: "ETRADEX | Estudiar, vivir e invertir en Marruecos",
+    metaDesc: "ETRADEX acompaña a estudiantes internacionales, familias, empresas e inversores en Rabat y Salé: matrícula, visado, vivienda, conserjería. Presupuesto gratis.",
+    eyebrow: "Rabat – Salé · Marruecos",
+    title: "Estudia, vive y emprende en Marruecos,",
+    titleAccent: "nosotros nos ocupamos del resto.",
+    sub: "Matrícula, visado, llegada, vivienda, trámites: un único interlocutor para que tu instalación en Marruecos sea un éxito.",
+    ctaSecondary: "Descubre nuestros servicios",
+    chips: ["Respuesta en 24 h", "Presupuesto gratis", "Français · English", "Con sede en Rabat – Salé"],
+    card: {
+      label: "Tarjeta de embarque",
+      title: "Tu llegada, paso a paso",
+      origins: [["PAR", "París"], ["DKR", "Dakar"], ["ABJ", "Abiyán"], ["KIN", "Kinsasa"], ["LBV", "Libreville"], ["DLA", "Duala"]],
+      dest: ["RBA", "Rabat – Salé"],
+      fields: [["Pasajero", "Tú"], ["Fórmula", "Llave en mano"], ["Contacto", "Uno solo"]],
+      items: [
+        ["Matrícula confirmada", "D-90"],
+        ["Visado presentado", "D-45"],
+        ["Recogida en el aeropuerto", "Día D"],
+        ["Llaves de tu vivienda", "Día D"],
+      ],
+      stamp: "Bienvenido a Marruecos",
+      foot: "Un solo contacto de principio a fin",
+    },
+
+    audience: {
+      eyebrow: "¿Para quién?",
+      title: "Un acompañamiento para cada perfil",
+      items: [
+        { icon: "graduation", title: "Estudiantes internacionales", text: "Matrícula, visado, vivienda y permiso de residencia.", service: "students" },
+        { icon: "users", title: "Familias y particulares", text: "Instalación, trámites y conserjería del día a día.", service: "concierge" },
+        { icon: "building", title: "Empresas", text: "Movilidad, acogida y vivienda para tus equipos.", service: "concierge" },
+        { icon: "chart", title: "Inversores", text: "Creación de empresa, red local, locales.", service: "investors" },
+      ],
+    },
+
+    services: {
+      eyebrow: "Nuestros servicios",
+      title: "Seis áreas, un único interlocutor",
+      sub: "Elige un servicio o combina varios: construimos el acompañamiento que se adapta a ti.",
+    },
+
+    journey: {
+      eyebrow: "Recorrido del estudiante",
+      title: "De tu país a tu campus, te acompañamos en cada etapa",
+      cta: "Ver el acompañamiento para estudiantes",
+    },
+
+    how: {
+      eyebrow: "Cómo funciona",
+      title: "Cuatro pasos sencillos",
+      steps: [
+        { icon: "chat", title: "Nos escribes", text: "Por WhatsApp o mediante el formulario, en francés o en inglés." },
+        { icon: "phone", title: "Hablamos", text: "Una llamada gratuita para entender tu situación." },
+        { icon: "file", title: "Una propuesta clara", text: "Qué hacemos, en cuánto tiempo y a qué precio." },
+        { icon: "check", title: "Nos encargamos", text: "Avanzamos y tú sigues cada etapa en tiempo real." },
+      ],
+    },
+
+    commitments: {
+      eyebrow: "Nuestros compromisos",
+      title: "Lo que puedes esperar de nosotros",
+      items: [
+        { icon: "clock", title: "Respuesta en 24 h", text: "Cada mensaje recibe respuesta en 24 horas hábiles." },
+        { icon: "user", title: "Un único interlocutor", text: "La misma persona sigue tu expediente de principio a fin." },
+        { icon: "tag", title: "Precio acordado de antemano", text: "Un presupuesto por escrito antes de empezar. Sin costes ocultos." },
+        { icon: "globe", title: "Francés e inglés", text: "Trabajamos en el idioma que te resulte más cómodo." },
+      ],
+    },
+
+    faq: { eyebrow: "Preguntas frecuentes", title: "Seguramente te preguntas", more: "Ver todas las preguntas" },
+  },
+
+  cta: {
+    title: "Hablemos de tu proyecto",
+    text: "Cuéntanos tu situación en pocas líneas. Te respondemos en 24 h con una propuesta clara.",
+    secondary: "Usar el formulario",
+  },
+
+  about: {
+    ticket: {
+      label: "Ficha de empresa",
+      code: "RBA",
+      codeSub: "Rabat – Salé · Marruecos",
+      fields: [["Fundada", "2026"], ["Idiomas", "FR · EN"], ["Respuesta", "En 24 h"]],
+      title: "Nuestros valores",
+      foot: "Un contacto de confianza sobre el terreno",
+    },
+    metaTitle: "Quiénes somos | ETRADEX, instalarse en Marruecos",
+    metaDesc: "ETRADEX es una empresa con sede en Rabat–Salé que acompaña a estudiantes internacionales, familias, empresas e inversores que se instalan en Marruecos.",
+    eyebrow: "Quiénes somos",
+    title: "Tu socio sobre el terreno en Marruecos",
+    sub: "ETRADEX nació de una constatación sencilla: instalarse en Marruecos es una gran oportunidad, pero los primeros pasos pueden convertirse rápidamente en una carrera de obstáculos.",
+    photoAlt: "Una calle de Rabat, Marruecos",
+    storyTitle: "Nuestra misión",
+    story: [
+      "ETRADEX SARLAU es una empresa con sede en Rabat–Salé. Acompaña a estudiantes internacionales, familias, empresas e inversores que eligen Marruecos para estudiar, vivir o desarrollar una actividad.",
+      "Nuestro papel: ser tu contacto de confianza sobre el terreno. Preparamos tus trámites, encontramos tu vivienda, te recibimos, coordinamos a los profesionales adecuados y seguimos disponibles una vez instalado.",
+      "El talento joven es nuestra prioridad: un estudiante bien acompañado a su llegada rinde mejor en sus estudios y se integra más rápido.",
+    ],
+    valuesTitle: "Nuestros valores",
+    values: [
+      { icon: "handshake", title: "Cercanía", text: "Estamos sobre el terreno en Rabat–Salé y somos fáciles de localizar." },
+      { icon: "eye", title: "Transparencia", text: "Un alcance claro y un precio acordado antes de empezar." },
+      { icon: "bolt", title: "Rapidez", text: "Respuesta en 24 h y novedades en cada etapa." },
+      { icon: "heart", title: "Cuidado", text: "Acompañamos a personas, no solo expedientes." },
+    ],
+    whyTitle: "¿Por qué Rabat – Salé?",
+    why: "Capital administrativa y ciudad universitaria, Rabat concentra universidades, escuelas, embajadas y organismos públicos. Salé, Temara y Kenitra completan un área accesible, bien conectada por tranvía y tren. Desde esta base trabajamos en todo Marruecos y en el extranjero.",
+    founderTitle: "Dirección",
+    founderText: "ETRADEX está dirigida por su fundador, que sigue personalmente los primeros pasos de cada cliente.",
+  },
+
+  servicesPage: {
+    ticket: {
+      label: "Nuestros servicios",
+      code: "06",
+      codeSub: "áreas combinables",
+      fields: [["Presupuesto", "Gratis"], ["Contacto", "Uno solo"], ["Idiomas", "FR · EN"]],
+      title: "Según tu situación",
+      foot: "Un solo contacto de principio a fin",
+    },
+    metaTitle: "Servicios: estudiantes, vivienda, conserjería | ETRADEX",
+    metaDesc: "Estudiantes internacionales, viajes y trámites, vivienda, conserjería, inversores y servicios a medida: los 6 servicios de ETRADEX en Rabat–Salé.",
+    eyebrow: "Nuestros servicios",
+    title: "Todo lo que necesitas para instalarte en Marruecos",
+    sub: "Seis áreas de acompañamiento que puedes combinar según tus necesidades. Un único interlocutor, presupuesto gratis.",
+  },
+
+  service: {
+    ticket: {
+      label: "Tu recorrido",
+      service: "Servicio",
+      base: "Base",
+      quote: "Presupuesto",
+      free: "Gratis",
+      foot: "Un solo contacto de principio a fin",
+    },
+    forWhom: "¿Para quién?",
+    includes: "Lo que hacemos por ti",
+    steps: "Cómo funciona",
+    faq: "Preguntas frecuentes",
+    others: "Nuestros otros servicios",
+    ask: "Haz una pregunta por WhatsApp",
+  },
+
+  faqPage: {
+    ticket: {
+      label: "Preguntas frecuentes",
+      codeSub: "preguntas, respuestas claras",
+      fields: [["Respuesta", "En 24 h"], ["Canal", "WhatsApp"], ["Idiomas", "FR · EN"]],
+      title: "Temas tratados",
+      items: [["Precios y presupuestos", "P2"], ["Trámites antes de llegar", "P4"], ["Ciudades cubiertas", "P5"], ["Visados y permisos de residencia", "P6"]],
+      foot: "¿No lo encuentras? Escríbenos por WhatsApp",
+    },
+    metaTitle: "Preguntas: estudiar y vivir en Marruecos | ETRADEX",
+    metaDesc: "Visados, vivienda, permiso de residencia, precios, plazos: respuestas a las preguntas más habituales sobre el acompañamiento de ETRADEX en Marruecos.",
+    eyebrow: "Preguntas frecuentes",
+    title: "Preguntas frecuentes",
+    sub: "¿No encuentras tu respuesta? Escríbenos por WhatsApp, te respondemos en 24 h.",
+    general: "Preguntas generales",
+    items: [
+      { q: "¿Quién es ETRADEX?", a: "ETRADEX SARLAU es una empresa con sede en Rabat–Salé que acompaña a estudiantes internacionales, familias, empresas e inversores en su instalación en Marruecos: trámites, vivienda, llegada, conserjería." },
+      { q: "¿Cuánto cuestan sus servicios?", a: "Cada situación es distinta, así que preparamos un presupuesto gratuito y sin compromiso tras una primera conversación. El precio siempre se acuerda antes de empezar." },
+      { q: "¿Cómo puedo contactarles?", a: "WhatsApp es lo más rápido. También puedes rellenar el formulario de contacto: respondemos en 24 horas hábiles." },
+      { q: "¿Pueden ayudarme antes de llegar a Marruecos?", a: "Sí. La mayoría de los trámites empiezan a distancia: lista de documentos, matrícula, visado, búsqueda de vivienda con visitas por vídeo." },
+      { q: "¿En qué ciudades trabajan?", a: "Tenemos nuestra sede en Rabat–Salé y trabajamos principalmente en Rabat, Salé, Temara y Kenitra. También acompañamos proyectos en otras ciudades de Marruecos y en el extranjero." },
+      { q: "¿Garantizan los visados y los permisos de residencia?", a: "No, esas decisiones corresponden a las autoridades. Lo que sí garantizamos es un expediente cuidadosamente preparado y un seguimiento en cada etapa." },
+      { q: "¿En qué idiomas trabajan?", a: "En francés y en inglés." },
+      { q: "¿Trabajan con empresas?", a: "Sí: acogida y alojamiento de empleados o becarios, conserjería de empresa y acompañamiento de proyectos de implantación." },
+    ],
+  },
+
+  contact: {
+    ticket: {
+      label: "Solicitud de presupuesto",
+      code: "24 h",
+      codeSub: "para responderte",
+      fields: [["Canal", "WhatsApp"], ["Presupuesto", "Gratis"], ["Idiomas", "FR · EN"]],
+      title: "Qué pasa después",
+      items: [["Describes tu necesidad", "01"], ["Respondemos en 24 h", "02"], ["Recibes un presupuesto claro", "03"], ["Abrimos tu expediente", "04"]],
+      foot: "Sin compromiso, precio acordado antes de empezar",
+    },
+    metaTitle: "Contacto y presupuesto gratis | ETRADEX Rabat – Salé",
+    metaDesc: "Contacta con ETRADEX por WhatsApp o por el formulario: respuesta en 24 h y presupuesto gratis para estudiar, alojarte o instalarte en Marruecos.",
+    eyebrow: "Contacto",
+    title: "Hablemos de tu proyecto",
+    sub: "Describe tu necesidad en pocas líneas: te respondemos en 24 h con una propuesta clara.",
+    fastest: "Lo más rápido",
+    fastestText: "Escríbenos directamente por WhatsApp.",
+    email: "Correo electrónico",
+    phone: "Teléfono",
+    location: "Ubicación",
+    form: {
+      title: "Formulario de contacto",
+      name: "Nombre completo",
+      email: "Correo electrónico",
+      phone: "Teléfono / WhatsApp",
+      phoneHint: "Con el prefijo del país",
+      profile: "Eres",
+      profiles: ["Estudiante", "Padre, madre / familia", "Particular", "Empresa", "Inversor", "Otro"],
+      service: "Servicio deseado",
+      serviceOther: "Otro / aún no lo sé",
+      message: "Tu mensaje",
+      messagePlaceholder: "Tu situación, fechas, ciudad…",
+      consent: "Acepto que ETRADEX utilice esta información para contactarme.",
+      required: "campo obligatorio",
+      submit: "Enviar mi solicitud",
+      sending: "Enviando…",
+      success: "¡Gracias! Tu solicitud se ha enviado. Te responderemos en 24 h.",
+      error: "No se ha podido enviar tu solicitud. No pasa nada: envía la misma solicitud por WhatsApp con un clic.",
+      sendWhatsapp: "Enviar por WhatsApp",
+      waIntro: "Hola ETRADEX, esta es mi solicitud:",
+      invalid: "Rellena los campos obligatorios.",
+    },
+  },
+
+  legal: {
+    metaTitle: "Aviso legal y privacidad | ETRADEX",
+    metaDesc: "Aviso legal del sitio web de ETRADEX: editor, alojamiento, propiedad intelectual y protección de datos personales conforme a la ley marroquí 09-08.",
+    eyebrow: "Información",
+    title: "Aviso legal",
+    pending: "inscripción en curso",
+    sections: {
+      editor: "Editor del sitio",
+      host: "Alojamiento",
+      ip: "Propiedad intelectual",
+      ipText: "Todos los textos, gráficos y la estructura de este sitio pertenecen a ETRADEX, salvo indicación contraria. Las fotografías de ilustración proceden de bancos de imágenes libres de derechos. Queda prohibida cualquier reproducción sin autorización.",
+      data: "Datos personales",
+      dataText: [
+        "La información enviada mediante el formulario de contacto o por WhatsApp se utiliza únicamente para responder a tu solicitud. Nunca se vende ni se cede a terceros.",
+        "De acuerdo con la ley marroquí n.º 09-08 relativa a la protección de las personas físicas con respecto al tratamiento de datos personales, tienes derecho de acceso, rectificación y oposición. Para ejercerlo, escríbenos a la dirección de correo indicada arriba.",
+      ],
+      cookies: "Cookies",
+      cookiesText: "Este sitio no utiliza cookies publicitarias ni herramientas de seguimiento.",
+    },
+    labels: { company: "Empresa", form: "Forma jurídica", capital: "Capital social", rc: "Registro Mercantil (RC)", ice: "ICE", seat: "Domicilio social", director: "Director de la publicación", email: "Correo electrónico", host: "Proveedor de alojamiento" },
+  },
+
+  notFound: {
+    title: "Página no encontrada",
+    text: "Esta página no existe o se ha movido.",
+    back: "Volver al inicio",
+  },
+};
+
+export default es;

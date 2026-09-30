@@ -441,10 +441,9 @@ ol {
   margin-left: auto;
 }
 
-.nav-desktop + .header-actions {
-  margin-left: var(--space-3);
-  padding-left: var(--space-4);
-  border-left: 1px solid var(--line);
+/* sélecteur : une pastille texte par autre langue (« EN ES »), sans fond */
+.lang-switches {
+  display: flex;
 }
 
 .lang-switch {
@@ -520,6 +519,13 @@ ol {
   color: var(--red);
 }
 
+.mobile-langs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 var(--space-6);
+}
+
 .mobile-lang {
   display: inline-flex;
   align-items: center;
@@ -540,6 +546,13 @@ ol {
 @media (min-width: 1080px) {
   .nav-desktop {
     display: flex;
+  }
+  /* filet entre la nav et les actions — seulement quand la nav est visible,
+     sinon il écrase le margin-left: auto qui pousse le burger à droite */
+  .nav-desktop + .header-actions {
+    margin-left: var(--space-3);
+    padding-left: var(--space-4);
+    border-left: 1px solid var(--line);
   }
   .burger,
   .mobile-menu {

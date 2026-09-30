@@ -48,7 +48,7 @@ export default function About({ lang }) {
             <blockquote className="slogan">« {t.slogan} »</blockquote>
           </div>
           <div className="split-media reveal">
-            <Picture name="rabat" alt={lang === "fr" ? "Rue de Rabat, Maroc" : "A street in Rabat, Morocco"} sizes="(max-width: 900px) 100vw, 540px" />
+            <Picture name="rabat" alt={t.about.photoAlt} sizes="(max-width: 900px) 100vw, 540px" />
           </div>
         </div>
       </section>

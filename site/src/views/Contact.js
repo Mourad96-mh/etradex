@@ -67,7 +67,7 @@ export default function Contact({ lang }) {
                 <span className="icon-chip"><Icon name="pin" size={20} /></span>
                 <div>
                   <p className="contact-label">{c.location}</p>
-                  <p>{SITE.city[lang]}, {lang === "fr" ? "Maroc" : "Morocco"}</p>
+                  <p>{SITE.city[lang]}, {t.ui.country}</p>
                 </div>
               </li>
             </ul>

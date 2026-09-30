@@ -1,4 +1,4 @@
-// 404 globale. Avec deux layouts racines (fr/en), Next l'enveloppe dans son propre
+// 404 globale. Avec plusieurs layouts racines (fr/en/es), Next l'enveloppe dans son propre
 // <html><body> : on rend donc un fragment autonome avec un style en ligne
 // (sinon la page sort sans feuille de style dans l'export statique).
 
@@ -26,12 +26,14 @@ export default function NotFound() {
       <div className="nf">
         <div>
           <p className="nf-code">404</p>
-          <h1>Page introuvable · Page not found</h1>
+          <h1>Page introuvable · Page not found · Página no encontrada</h1>
           <p>Cette page n’existe pas ou a été déplacée.</p>
           <p lang="en">This page does not exist or has been moved.</p>
+          <p lang="es">Esta página no existe o se ha movido.</p>
           <div className="nf-actions">
             <a className="p" href="/">Retour à l’accueil</a>
             <a className="s" href="/en/" lang="en">Back to home</a>
+            <a className="s" href="/es/" lang="es">Volver al inicio</a>
           </div>
         </div>
       </div>

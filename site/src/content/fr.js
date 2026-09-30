@@ -11,8 +11,12 @@ const fr = {
     menu: "Menu",
     close: "Fermer",
     nav: { home: "Accueil", about: "À propos", services: "Services", faq: "FAQ", contact: "Contact" },
-    langLabel: "English",
-    langShort: "EN",
+    // nom de CETTE langue, affiché dans le sélecteur des autres versions
+    langName: "Français",
+    langShort: "FR",
+    langs: "Langue",
+    breadcrumb: "Fil d’Ariane",
+    country: "Maroc",
     whatsappCta: "Écrire sur WhatsApp",
     whatsappFab: "Nous écrire sur WhatsApp",
     contactCta: "Demander un devis",
@@ -126,6 +130,7 @@ const fr = {
     eyebrow: "À propos",
     title: "Votre partenaire sur place, au Maroc",
     sub: "ETRADEX est née d’un constat simple : s’installer au Maroc est une belle opportunité, mais les premières démarches peuvent vite devenir un parcours du combattant.",
+    photoAlt: "Rue de Rabat, Maroc",
     storyTitle: "Notre mission",
     story: [
       "ETRADEX SARLAU est une société basée à Rabat–Salé. Elle accompagne les étudiants étrangers, les familles, les entreprises et les investisseurs qui choisissent le Maroc pour étudier, vivre ou développer une activité.",
