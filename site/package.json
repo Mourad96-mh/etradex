@@ -1,0 +1,25 @@
+{
+  "name": "etradex-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "images": "node scripts/make-images.mjs",
+    "og": "node scripts/make-og.mjs",
+    "audit": "node scripts/audit.mjs",
+    "check:responsive": "node scripts/check-responsive.mjs",
+    "serve": "node scripts/serve.mjs",
+    "postbuild": "node scripts/postbuild.mjs",
+    "check": "npm run audit && npm run check:responsive",
+    "logo": "node scripts/make-logo.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.26",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.3"
+  }
+}

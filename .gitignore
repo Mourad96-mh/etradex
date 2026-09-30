@@ -1,0 +1,9 @@
+# Brief client (échange commercial privé) et photo source du logo (copiée dans site/brand/)
+euloges.txt
+WhatsApp Image *.jpeg
+
+node_modules/
+.next/
+out/
+.vercel/
+*.log

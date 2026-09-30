@@ -1,0 +1,280 @@
+// English site copy (UI + pages). The 6 services live in services.js.
+
+const en = {
+  lang: "en",
+  locale: "en_US",
+  slogan: "Your partner for mobility, studies and the development of young talent in Morocco",
+
+  ui: {
+    skip: "Skip to content",
+    menu: "Menu",
+    close: "Close",
+    nav: { home: "Home", about: "About", services: "Services", faq: "FAQ", contact: "Contact" },
+    langLabel: "Français",
+    langShort: "FR",
+    whatsappCta: "Message us on WhatsApp",
+    whatsappFab: "Message us on WhatsApp",
+    contactCta: "Get a quote",
+    learnMore: "Learn more",
+    allServices: "All our services",
+    home: "Home",
+    waDefault: "Hello ETRADEX, I would like some information about your services.",
+    waService: (title) => `Hello ETRADEX, I am interested in your “${title}” service.`,
+  },
+
+  footer: {
+    about: "ETRADEX supports international students, families, companies and investors settling in Morocco, from Rabat–Salé.",
+    services: "Services",
+    company: "ETRADEX",
+    contact: "Contact",
+    legal: "Legal notice",
+    rights: "All rights reserved.",
+    follow: "Follow us",
+  },
+
+  home: {
+    metaTitle: "ETRADEX | Study, live and invest in Morocco",
+    metaDesc: "ETRADEX supports international students, families, companies and investors in Rabat and Salé: enrolment, visas, housing, concierge. Free quote.",
+    eyebrow: "Rabat – Salé · Morocco",
+    title: "Study, live and do business in Morocco,",
+    titleAccent: "we handle the rest.",
+    sub: "Enrolment, visa, arrival, housing, paperwork: one single contact to make your move to Morocco a success.",
+    ctaSecondary: "Explore our services",
+    chips: ["Reply within 24 h", "Free quote", "Français · English", "Based in Rabat – Salé"],
+    card: {
+      label: "Boarding pass",
+      title: "Your arrival, step by step",
+      origins: [["PAR", "Paris"], ["DKR", "Dakar"], ["ABJ", "Abidjan"], ["KIN", "Kinshasa"], ["LBV", "Libreville"], ["DLA", "Douala"]],
+      dest: ["RBA", "Rabat – Salé"],
+      fields: [["Passenger", "You"], ["Package", "All-in"], ["Contact", "Just one"]],
+      items: [
+        ["Enrolment confirmed", "D-90"],
+        ["Visa submitted", "D-45"],
+        ["Airport pick-up", "Day 1"],
+        ["Keys to your home", "Day 1"],
+      ],
+      stamp: "Welcome to Morocco",
+      foot: "One contact from start to finish",
+    },
+
+    audience: {
+      eyebrow: "Who is it for?",
+      title: "Support for every profile",
+      items: [
+        { icon: "graduation", title: "International students", text: "Enrolment, visa, housing and residence permit.", service: "students" },
+        { icon: "users", title: "Families and individuals", text: "Settling in, paperwork and everyday concierge.", service: "concierge" },
+        { icon: "building", title: "Companies", text: "Mobility, welcome and housing for your teams.", service: "concierge" },
+        { icon: "chart", title: "Investors", text: "Business set-up, local network, premises.", service: "investors" },
+      ],
+    },
+
+    services: {
+      eyebrow: "Our services",
+      title: "Six areas, one single contact",
+      sub: "Pick one service or combine several: we build the support that fits you.",
+    },
+
+    journey: {
+      eyebrow: "Student journey",
+      title: "From your home country to your campus, we are with you at every step",
+      cta: "See our student support",
+    },
+
+    how: {
+      eyebrow: "How it works",
+      title: "Four simple steps",
+      steps: [
+        { icon: "chat", title: "You message us", text: "On WhatsApp or through the form, in French or English." },
+        { icon: "phone", title: "We talk it through", text: "A free call to understand your situation." },
+        { icon: "file", title: "A clear proposal", text: "What we do, how long it takes and what it costs." },
+        { icon: "check", title: "We take care of it", text: "We move forward and you follow each step in real time." },
+      ],
+    },
+
+    commitments: {
+      eyebrow: "Our commitments",
+      title: "What you can expect from us",
+      items: [
+        { icon: "clock", title: "Reply within 24 h", text: "Every message gets an answer within 24 business hours." },
+        { icon: "user", title: "One contact person", text: "The same person follows your file from start to finish." },
+        { icon: "tag", title: "Price agreed upfront", text: "A written quote before we start. No hidden fees." },
+        { icon: "globe", title: "French and English", text: "We speak the language that suits you." },
+      ],
+    },
+
+    faq: { eyebrow: "FAQ", title: "You are probably wondering", more: "See all questions" },
+  },
+
+  cta: {
+    title: "Let’s talk about your project",
+    text: "Tell us about your situation in a few lines. We reply within 24 h with a clear proposal.",
+    secondary: "Use the form",
+  },
+
+  about: {
+    ticket: {
+      label: "Company card",
+      code: "RBA",
+      codeSub: "Rabat – Salé · Morocco",
+      fields: [["Founded", "2026"], ["Languages", "FR · EN"], ["Reply", "Within 24 h"]],
+      title: "Our values",
+      foot: "A trusted contact on the ground",
+    },
+    metaTitle: "About ETRADEX | Mobility and relocation in Morocco",
+    metaDesc: "ETRADEX is a company based in Rabat–Salé that supports international students, families, companies and investors settling in Morocco.",
+    eyebrow: "About us",
+    title: "Your partner on the ground in Morocco",
+    sub: "ETRADEX was born from a simple observation: moving to Morocco is a great opportunity, but the first steps can quickly become an obstacle course.",
+    storyTitle: "Our mission",
+    story: [
+      "ETRADEX SARLAU is a company based in Rabat–Salé. It supports international students, families, companies and investors who choose Morocco to study, live or grow a business.",
+      "Our role: to be your trusted contact on the ground. We prepare your procedures, find your home, welcome you, coordinate the right professionals and stay available once you have settled in.",
+      "Young talent comes first: a student who is well supported on arrival does better in their studies and settles in faster.",
+    ],
+    valuesTitle: "Our values",
+    values: [
+      { icon: "handshake", title: "Proximity", text: "We are on the ground in Rabat–Salé and easy to reach." },
+      { icon: "eye", title: "Transparency", text: "A clear scope and a price agreed before we start." },
+      { icon: "bolt", title: "Responsiveness", text: "A reply within 24 h and updates at every step." },
+      { icon: "heart", title: "Care", text: "We support people, not just files." },
+    ],
+    whyTitle: "Why Rabat – Salé?",
+    why: "Morocco’s administrative capital and a university city, Rabat is home to universities, schools, embassies and public offices. Salé, Témara and Kénitra complete an accessible area, well connected by tram and train. From this base we work across Morocco and abroad.",
+    founderTitle: "Management",
+    founderText: "ETRADEX is run by its founder, who personally follows each client’s first steps.",
+  },
+
+  servicesPage: {
+    ticket: {
+      label: "Our services",
+      code: "06",
+      codeSub: "areas to combine",
+      fields: [["Quote", "Free"], ["Contact", "Just one"], ["Languages", "FR · EN"]],
+      title: "Based on your situation",
+      foot: "One contact from start to finish",
+    },
+    metaTitle: "Our services: students, housing, concierge | ETRADEX",
+    metaDesc: "International students, travel and paperwork, housing, concierge, investors and tailored services: the 6 ETRADEX services in Rabat–Salé.",
+    eyebrow: "Our services",
+    title: "Everything you need to settle in Morocco",
+    sub: "Six areas of support to combine as you need. One contact person, a free quote.",
+  },
+
+  service: {
+    ticket: {
+      label: "Your journey",
+      service: "Service",
+      base: "Base",
+      quote: "Quote",
+      free: "Free",
+      foot: "One contact from start to finish",
+    },
+    forWhom: "Who is it for?",
+    includes: "What we do for you",
+    steps: "How it works",
+    faq: "Frequently asked questions",
+    others: "Our other services",
+    ask: "Ask a question on WhatsApp",
+  },
+
+  faqPage: {
+    ticket: {
+      label: "Frequently asked",
+      codeSub: "questions, clear answers",
+      fields: [["Reply", "Within 24 h"], ["Channel", "WhatsApp"], ["Languages", "FR · EN"]],
+      title: "Topics covered",
+      items: [["Prices and quotes", "Q2"], ["Steps before you arrive", "Q4"], ["Cities covered", "Q5"], ["Visas and residence permits", "Q6"]],
+      foot: "Not found? Message us on WhatsApp",
+    },
+    metaTitle: "FAQ: studying and settling in Morocco | ETRADEX",
+    metaDesc: "Visas, housing, residence permits, prices, timing: answers to the most common questions about ETRADEX support in Morocco.",
+    eyebrow: "FAQ",
+    title: "Frequently asked questions",
+    sub: "Can’t find your answer? Message us on WhatsApp, we reply within 24 h.",
+    general: "General questions",
+    items: [
+      { q: "Who is ETRADEX?", a: "ETRADEX SARLAU is a company based in Rabat–Salé that supports international students, families, companies and investors settling in Morocco: paperwork, housing, arrival, concierge." },
+      { q: "How much do your services cost?", a: "Every situation is different, so we prepare a free, no-commitment quote after a first conversation. The price is always agreed before we start." },
+      { q: "How can I contact you?", a: "WhatsApp is the fastest. You can also fill in the contact form: we reply within 24 business hours." },
+      { q: "Can you help me before I arrive in Morocco?", a: "Yes. Most procedures start remotely: document list, enrolment, visa, housing search with video viewings." },
+      { q: "Which cities do you cover?", a: "We are based in Rabat–Salé and mainly work in Rabat, Salé, Témara and Kénitra. We also support projects elsewhere in Morocco and abroad." },
+      { q: "Do you guarantee visas and residence permits?", a: "No, those decisions belong to the authorities. What we do guarantee is a carefully prepared file and follow-up at every step." },
+      { q: "Which languages do you work in?", a: "French and English." },
+      { q: "Do you work with companies?", a: "Yes: welcoming and housing employees or interns, corporate concierge, support for business set-up projects." },
+    ],
+  },
+
+  contact: {
+    ticket: {
+      label: "Quote request",
+      code: "24 h",
+      codeSub: "to get back to you",
+      fields: [["Channel", "WhatsApp"], ["Quote", "Free"], ["Languages", "FR · EN"]],
+      title: "What happens next",
+      items: [["You describe your needs", "01"], ["We reply within 24 h", "02"], ["You get a clear quote", "03"], ["We start your file", "04"]],
+      foot: "No commitment, price agreed before we start",
+    },
+    metaTitle: "Contact and free quote | ETRADEX Rabat – Salé",
+    metaDesc: "Contact ETRADEX on WhatsApp or through the form: a reply within 24 h and a free quote for your study, housing or relocation project in Morocco.",
+    eyebrow: "Contact",
+    title: "Let’s talk about your project",
+    sub: "Describe your need in a few lines: we reply within 24 h with a clear proposal.",
+    fastest: "Fastest",
+    fastestText: "Message us directly on WhatsApp.",
+    email: "E-mail",
+    phone: "Phone",
+    location: "Location",
+    form: {
+      title: "Contact form",
+      name: "Full name",
+      email: "E-mail",
+      phone: "Phone / WhatsApp",
+      phoneHint: "Include your country code",
+      profile: "You are",
+      profiles: ["Student", "Parent / family", "Individual", "Company", "Investor", "Other"],
+      service: "Service needed",
+      serviceOther: "Other / not sure yet",
+      message: "Your message",
+      messagePlaceholder: "Your situation, dates, city…",
+      consent: "I agree that ETRADEX may use this information to contact me.",
+      required: "required field",
+      submit: "Send my request",
+      sending: "Sending…",
+      success: "Thank you! Your request has been sent. We will reply within 24 h.",
+      error: "Your request could not be sent. No problem: send the same request on WhatsApp in one click.",
+      sendWhatsapp: "Send via WhatsApp",
+      waIntro: "Hello ETRADEX, here is my request:",
+      invalid: "Please fill in the required fields.",
+    },
+  },
+
+  legal: {
+    metaTitle: "Legal notice and privacy | ETRADEX",
+    metaDesc: "Legal notice for the ETRADEX website: publisher, hosting, intellectual property and personal data protection under Moroccan law 09-08.",
+    eyebrow: "Information",
+    title: "Legal notice",
+    pending: "registration in progress",
+    sections: {
+      editor: "Website publisher",
+      host: "Hosting",
+      ip: "Intellectual property",
+      ipText: "All texts, graphics and the structure of this website belong to ETRADEX unless stated otherwise. Illustration photos come from royalty-free image libraries. Any reproduction without permission is prohibited.",
+      data: "Personal data",
+      dataText: [
+        "Information sent through the contact form or WhatsApp is used only to answer your request. It is never sold or passed on to third parties.",
+        "Under Moroccan law no. 09-08 on the protection of individuals with regard to the processing of personal data, you have the right to access, correct and object to your data. To exercise it, write to us at the e-mail address above.",
+      ],
+      cookies: "Cookies",
+      cookiesText: "This website uses no advertising cookies or tracking tools.",
+    },
+    labels: { company: "Company", form: "Legal form", capital: "Share capital", rc: "Trade register (RC)", ice: "ICE", seat: "Registered office", director: "Publication director", email: "E-mail", host: "Host" },
+  },
+
+  notFound: {
+    title: "Page not found",
+    text: "This page does not exist or has been moved.",
+    back: "Back to home",
+  },
+};
+
+export default en;
